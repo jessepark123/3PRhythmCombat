@@ -25,3 +25,11 @@ void ARhythmItem::Tick(float DeltaTime)
 
 }
 
+void ARhythmItem::UpdateItemAttributes()
+{
+	ItemAttributes.ItemDescription = ItemDescription;
+	ItemAttributes.ItemName = ItemName;
+	ItemAttributes.ItemNumber = ItemNumber;
+	ItemAttributes.ItemClassRef = ARhythmItem::StaticClass();
+}
+
