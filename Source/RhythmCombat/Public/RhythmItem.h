@@ -21,6 +21,15 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FItemData ItemAttributes;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString ItemName = "Default Name";
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int ItemNumber = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString ItemDescription = "Default Description";
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -29,4 +38,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	/*Updates all of the values of the ItemAttributes struct to match what this object has so it can be despawned and the struct can be saved easily later*/
+	UFUNCTION(BlueprintCallable)
+	void UpdateItemAttributes();
 };

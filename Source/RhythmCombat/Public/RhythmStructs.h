@@ -21,6 +21,10 @@ struct FItemData
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString ItemDescription = "Default Description";
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<class ARhythmItem> ItemClassRef;
+
 };
 
 class RHYTHMCOMBAT_API RhythmStructs
